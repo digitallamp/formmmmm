@@ -1,0 +1,2224 @@
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="js wf-roboto-n4-active wf-roboto-n5-active wf-roboto-n7-active wf-ptserif-i4-active wf-roboto-i4-active wf-roboto-i5-active wf-roboto-i7-active wf-ptserif-n4-active wf-ptserif-n7-active wf-active"><head><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"000fd7bcd4","applicationID":"9080060","transactionName":"MgQEMRNWXEEFUxJcCwtOKzMiGHFTFlUDRxcmDggRE1heXgFCSXwKAQQe","queueTime":0,"applicationTime":692,"ttGuid":"EB11DC922394900E","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"000fd7bcd4",applicationID:"9080060"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta name="title" content="Vacancies | UNICEF Careers">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Vacancies">
+<meta name="google-site-verification" content="GxUdwgvND2dvxuHiBj468fyTP4i_FNcqN9yRwLwM1zg" />
+<meta property="og:url" content="https://www.unicef.org/careers/">
+<meta property="og:title" content="Vacancies">
+<meta property="og:description" content="Vacancies">
+<meta property="og:image" content="https://www.unicef.org/careers/themes/custom/unicef/UNICEF_ForEveryChild_White_Vertical_RGB_ENG.jpg">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #c1c1c1} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, #sliding-popup label, #sliding-popup div, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #333333;} .eu-cookie-withdraw-tab { border-color: #333333;}</style>
+<link rel="shortcut icon" href="https://www.unicef.org/careers/themes/custom/unicef/assets/dist/images/icons/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="alternate" hreflang="en" href="https://www.unicef.org/careers/vacancies/template">
+<link rel="canonical" href="https://www.unicef.org/careers/vacancies/template">
+<link rel="shortlink" href="https://www.unicef.org/careers/node/271">
+<link rel="revision" href="https://www.unicef.org/careers/vacancies/template">
+<script src="https://www.unicef.org/careers/sites/unicef.org.careers/files/google_tag/google_tag.script.js?q69yvc" defer="defer"></script>
+
+    <title>Vacancies | UNICEF Careers</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <link rel="stylesheet" media="all" href="https://sites.unicef.org/vacanciestemplate/css_L4c-4TVsyPPu_z4baRiBtrXFUc4Pr7TK0HPfrOjTrUE.css?q69yvc">
+<link rel="stylesheet" media="all" href="https://sites.unicef.org/vacanciestemplate/css_n2UEOvaiRPEEkSLV52TAnZpm-pT4mQsua13Vk8hsV3U.css?q69yvc">
+
+<script src="https://sites.unicef.org/vacanciestemplate/js_B7pS3ddmNLFYOJi3j28odiodelMu-EhaOeKlHZ8E6y0.js"></script>
+<script src="https://www.googletagmanager.com/gtm.js?id=GTM-WBDQQ5" async=""></script>
+</head>
+<body class="path-search path-node page-node-type-page has-glyphicons" data-spy="scroll" data-target="#anchor-scroll" data-offset="0" style="">
+<a href="#main-content" class="visually-hidden focusable skip-link">
+  Skip to main content
+</a>
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBDQQ5" height="0" width="0" title="Google Tag Manager"></iframe></noscript>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+
+      <div role="heading" class="message-alert-header">
+        <div class="region region-header">
+    <div data-drupal-messages-fallback="" class="hidden"></div>
+
+  </div>
+
+    </div>
+
+          <header class="navbar navbar-default" id="navbar" role="banner">
+              <div class="">
+
+      <div class="layout-container">
+
+  <div class="region region-masthead-prefix">
+    <div class="masthead-prefix-container" data-set="masthead-prefix-container-data">
+      <div class="header-prefix-blocks  no-border ">
+        <nav role="navigation" aria-labelledby="block-global-links-menu" id="block-global-links" data-block-plugin-id="system_menu_block:global-links">
+
+  <span class="visually-hidden" id="block-global-links-menu">Global Links</span>
+
+
+
+
+
+    <ul class="menu-global-links">
+		  		    <li>
+          <a href="https://www.unicef.org/" class="global-link__lnk" data-action="https://www.unicef.org/" data-tracked-component="global-link" data-bound="click" data-label="UNICEF Global">UNICEF Global</a>
+		    </li>
+		  		</ul>
+
+
+
+
+  </nav>
+
+<div class="btn--contrast">
+	<a class="high-contrast__lnk" data-action="https://www.unicef.org/careers/vacancies/template" tabindex="0" data-tracked-component="high-contrast" data-bound="click" data-label="High contrast">High contrast</a>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+        <div class="logo-phone">
+            <div class="region region-masthead-primary">
+
+
+      <div class="logo">
+  <a href="https://www.unicef.org/careers/" title="UNICEF" rel="home" class="site-branding__logo">
+  	  	    <span class="icon-logo-unicef en">
+      <em class="visibility-hidden">Unicef default logo</em>
+    </span>
+  </a>
+      <span class="navbar-text-country-name">Careers</span>
+  </div>
+
+  </div>
+
+        </div>
+        <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+        <div class="logo-other">
+            <div class="region region-masthead-primary">
+
+
+      <div class="logo">
+  <a href="https://www.unicef.org/careers/" title="UNICEF" rel="home" class="site-branding__logo">
+  	  	    <span class="icon-logo-unicef en">
+      <em class="visibility-hidden">Unicef default logo</em>
+    </span>
+  </a>
+      <span class="navbar-text-country-name">Careers</span>
+  </div>
+
+  </div>
+
+        </div>
+        <div class="donate-n-search">
+             <div class="region region-masthead-secondary">
+    <div class="secondary-menu-container" data-set="secondary-menu-container-data">
+<section id="block-secondary-menu" data-block-plugin-id="system_menu_block:secondary" class="block block-system block-system-menu-blocksecondary clearfix">
+
+
+
+
+<div class="menu-explore">
+                <ul class="menu nav navbar-nav">
+                  <li>
+                                            <ul class="dropdown--list" data-tracked-component="dropdown">
+  <li class=" expanded dropdown  dropdown--explore keep-open" data-tracked-component="pagination_page_size">
+    <a href="#" title="Explore UNICEF" class="dropdown-toggle dropdown--toggle-explore text-uppercase" data-toggle="dropdown" aria-expanded="false" data-tracked-component="dropdown_option" data-bound="null" data-label="Explore UNICEF">Explore UNICEF
+      <div class="icon-arrow">
+        <span class="icon-icon__arrow-down"></span>
+        <span class="vertical-line"></span>
+      </div>
+    </a>
+    <ul class="menu dropdown-menu dropdown--menu-explore">
+              <li class="expanded dropdown dropdown--items-explore">
+                      <a href="https://www.unicef.org/about-unicef" class="" data-action="https://www.unicef.org/about-unicef" data-tracked-component="dropdown_option" data-bound="click" data-label="About UNICEF">About UNICEF</a>
+                  </li>
+              <li class="expanded dropdown dropdown--items-explore">
+                      <a href="https://www.unicef.org/careers/where-we-work" class="" data-action="https://www.unicef.org/careers/where-we-work" data-tracked-component="dropdown_option" data-bound="click" data-label="Where we work">Where we work</a>
+                  </li>
+              <li class="expanded dropdown dropdown--items-explore">
+                      <a href="https://www.unicef.org/careers/explore-careers-unicef" class="" data-action="https://www.unicef.org/careers/explore-careers-unicef" data-tracked-component="dropdown_option" data-bound="click" data-label="Explore careers">Explore careers</a>
+                  </li>
+              <li class="expanded dropdown dropdown--items-explore">
+                      <a href="https://www.unicef.org/careers/working-humanitarian-emergencies" class="" data-action="https://www.unicef.org/careers/working-humanitarian-emergencies" data-tracked-component="dropdown_option" data-bound="click" data-label="Working in emergencies">Working in emergencies</a>
+                  </li>
+              <li class="expanded dropdown dropdown--items-explore">
+                      <a href="https://www.unicef.org/careers/equity-inclusion-and-diversity-unicef" class="" data-action="https://www.unicef.org/careers/equity-inclusion-and-diversity-unicef" data-tracked-component="dropdown_option" data-bound="click" data-label="Diversity and inclusion">Diversity and inclusion</a>
+                  </li>
+              <li class="expanded dropdown dropdown--items-explore">
+                      <a href="https://www.unicef.org/careers/executive-management" class="" data-action="https://www.unicef.org/careers/executive-management" data-tracked-component="dropdown_option" data-bound="click" data-label="Leadership recruitment">Leadership recruitment</a>
+                  </li>
+              <li class="expanded dropdown dropdown--items-explore">
+                      <a href="https://donate.unicef.org/donate/now/" class="" data-action="https://donate.unicef.org/donate/now/" data-tracked-component="dropdown_option" data-bound="click" data-label="Support UNICEF">Support UNICEF</a>
+                  </li>
+          </ul>
+  </li>
+</ul>
+
+
+
+                    </li>
+                  <li>
+                                            <a href="https://jobs.unicef.org/" class="btn btn--default" data-action="https://jobs.unicef.org/" data-tracked-component="cta" data-bound="click" data-label="Search jobs">Search jobs</a>
+                    </li>
+                  <li>
+                                            <a href="https://secure.dc7.pageuppeople.com/apply/671/cw/applicationForm/default.asp" class="btn btn--default" data-action="https://secure.dc7.pageuppeople.com/apply/671/cw/applicationForm/default.asp" data-tracked-component="cta" data-bound="click" data-label="Candidate login">Candidate login</a>
+                    </li>
+              </ul>
+
+</div>
+
+
+  </section>
+</div>
+
+
+  </div>
+
+              <div class="searchbutton-block" data-set="searchbutton-container-data" style="display: none;"></div>
+        </div>
+
+      </div>
+
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse" aria-expanded="false">
+
+  <div class="region region-navigation-collapsible" style="margin-top: 0px;">
+    <div class="layout-container">
+      <nav role="navigation" aria-labelledby="block-main-menu-menu" id="block-main-menu" data-block-plugin-id="system_menu_block:main">
+            <span class="sr-only" id="block-main-menu-menu">Main navigation</span>
+
+
+
+
+    <ul class="menu nav navbar-nav nav--menu" data-tracked-component="navigation_first_level" data-bound="null">
+          <li class="menu-item expanded dropdown nav--menu-item">
+      <a href="https://www.unicef.org/careers/explore-careers-unicef" title="Explore careers" data-tracked-component="navigation_element" data-label="Explore careers" data-bound="click">Explore careers</a>
+    </li>
+          <li class="menu-item expanded dropdown nav--menu-item">
+      <a href="https://www.unicef.org/careers/life-unicef" title="Life at UNICEF" data-tracked-component="navigation_element" data-label="Life at UNICEF" data-bound="click">Life at UNICEF</a>
+    </li>
+          <li class="menu-item expanded dropdown nav--menu-item">
+      <a href="https://www.unicef.org/careers/get-prepared" title="Get prepared" data-tracked-component="navigation_element" data-label="Get prepared" data-bound="click">Get prepared</a>
+    </li>
+          <li class="menu-item expanded dropdown nav--menu-item">
+      <a href="https://www.unicef.org/careers/career-stories-and-news" title="Stories and news" data-tracked-component="navigation_element" data-label="Stories and news" data-bound="click">Stories and news</a>
+    </li>
+  </ul>
+
+
+
+
+  </nav>
+
+
+
+      <div class="secondary-menu-block" data-set="secondary-menu-container-data"></div>
+      <div class="masthead-prefix-blocks" data-set="masthead-prefix-container-data"></div>
+    </div>
+  </div>
+
+        </div>
+                    </div>
+          </header>
+
+  <div role="main" class="container main-container  js-quickedit-main-content">
+    <div class="row">
+
+
+                  <section>
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+    <section id="block-searchform" data-block-plugin-id="search_popup_form_block" class="block block-unicef-search block-search-popup-form-block clearfix">
+
+
+
+      <div class="search--region" role="search" id="search"><div class="search-content"><h3 class="title">Search UNICEF</h3><div class="search--field" data-tracked-component="search_footer"><form class="search-popup-form" data-drupal-selector="search-popup-form" action="https://www.unicef.org/careers/vacancies/template" method="post" id="search-popup-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-search js-form-item-search form-no-label form-group">
+      <label for="edit-search" class="control-label sr-only js-form-required form-required">Search input</label>
+
+
+  <input placeholder="Search" class="search--input form-text required form-control" data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="60" maxlength="128" required="required" aria-required="true">
+
+
+
+  </div>
+<input autocomplete="off" data-drupal-selector="form-upppxu-g2y7rpsb0b2oepz3arffmgbssjlnk-6zxx0" type="hidden" name="form_build_id" value="form-_uppPxu_g2y7rpSB0B2oEPZ3aRfFMGBssjLNk_6ZXx0"><input data-drupal-selector="edit-search-popup-form" type="hidden" name="form_id" value="search_popup_form"><div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button class="search--button button js-form-submit form-submit btn-default btn" aria-label="Submit Search" data-tracked-component="search_footer_submit" role="button" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value=""></button></div>
+
+</form>
+</div></div></div>
+  </section>
+
+
+  </div>
+</div>
+
+
+
+
+                          <a id="main-content"></a>
+            <div class="region region-content">
+
+<article role="article" about="https://www.unicef.org/careers/vacancies/template" class="page full clearfix node--basic-page">
+  <div class="content">
+
+            <div class="field field--name-field-page-hero field--type-entity-reference-revisions field--label-hidden field--item">
+
+      <div class="hero--vacancies hero hero--no-image">
+  <div class="hero--sub-content">
+    <div class="hero--content-category">
+      <span><div about="https://www.unicef.org/careers/taxonomy/term/2866">
+  <div class="content-category-content">
+
+      <h2>
+            <div class="field field--name-name field--type-string field--label-hidden field--item">Vacancies</div>
+      </h2>
+
+
+            <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item"><div>
+
+
+            <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">  <img width="100" height="100" alt="Vacancies" title="Vacancies" src="https://www.unicef.org/careers/sites/unicef.org.careers/files/content_group/icons/Vacancies.svg">
+</div>
+
+</div>
+</div>
+
+  </div>
+</div>
+</span>
+    </div>
+    <div class="hero--title">
+      <h1>Current vacancies</h1>
+    </div>
+          <div class="hero--paragraph">
+        <h3>Explore our current job opportunities</h3>
+      </div>
+          </div>
+</div>
+
+</div>
+
+
+    <!-- Tertiary navigation  component -->
+
+    <div class="page-content">
+
+      <div class="field field--name-field-page-content-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">
+
+<div class="section--block component-section">
+  <div class="container">
+    <div class="text--block-content">
+                </div>
+
+      <div class="field field--name-field-component-sec-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">
+<div class="text--block-content section-block-content">
+
+            <div class="field field--name-field-component-text-content field--type-text-long field--label-hidden field--item">
+
+<style>
+<!--/*--><![CDATA[/* ><!--*/
+
+form#jobs-form > p {
+  text-align: center;
+}
+#search-keyword {
+  width: 100% !important;
+  max-width: 1120px !important;
+  padding: 12px 20px 12px 20px !important;
+  font-size: 20px !important;
+}
+#search-filters {
+  display: flex !important;
+  margin: 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1175px;
+}
+#search-filters h3 {
+  padding: 10px 12px 12px 10px;
+  line-height: 15px;
+  border-radius: 5px;
+  background: #fff;
+  min-width: 100%;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.175);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.175);
+  font-weight: normal;
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+  color: #303030;
+  margin-bottom: 0px;
+}
+
+#search-filters h3.open {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 1px solid #abbbc1;
+}
+#search-filters select {
+  height: 38px;
+  margin: 10px 0 0 0;
+  width: 100%;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  background-color: white;
+}
+
+.search-filter-type {
+    flex: 1;
+    margin: 10px;
+    position: relative;
+    min-width: 260px;
+    max-width: 360px;
+}
+
+
+.filter-wrapper {
+    font-weight: bold;
+    position: absolute;
+    padding: 0 20px 0 0;
+    width: 100%;
+    z-index: 31;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    color: black;
+    border: 1px solid red;
+    min-width: 100%;
+    padding: 10px 0 10px 0;
+    left: 0;
+    min-width: 100%;
+    max-height: 215px;
+    overflow: scroll;
+    border: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.175);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.175);
+}
+.filter-wrapper li::before {
+  content: none !important;
+}
+#job-mail {
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+  font-size: 100%;
+  position: relative;
+}
+.text-input {
+  width: 1170px;
+  border: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-size: 1.5em;
+}
+#search-results {
+  margin-top: 20px;
+}
+.text--block-content {
+  max-width: none !important;
+  width: auto !important;
+}
+
+.container {
+  max-width: none !important;
+  width: auto !important;
+  padding: 0 !important;
+}
+.section--block.component-section {
+    padding: 0;
+}
+.vancancySearchArea {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 50px;
+}
+.field.field--name-field-component-text-content.field--type-text-long.field--label-hidden.field--item {
+  padding: 0;
+}
+.hero--vacancies.hero.hero--no-image {
+    margin-bottom: 0;
+}
+.hero--no-image:after {
+    background-color: #f1f1f1;
+}
+
+.job-search-categories {
+  -webkit-column-count: 2;
+    box-shadow: 0 0 black;
+    width: 1170px;
+    margin: 0 auto;
+}
+.filter-wrapper {
+  display: none;
+}
+.filter-group div {
+    padding: 0 5px;
+}
+ul.filter {
+  padding: 5px !important;
+}
+
+.clickable-area {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 38px;
+  top: 0px;
+  border-left: 1px solid #abbbc1;
+  z-index: 30;
+}
+
+form#jobs-form {
+  margin-bottom: 0;
+}
+
+.arrow-icon {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  right: 14px;
+  top: 10px;
+  border-left: 3px solid #1cabe2;
+  border-top: 3px solid #1cabe2;
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+label{
+  font-weight: lighter !important;
+}
+
+.open span.arrow-icon {
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+div#job {
+  padding:40px;
+  max-width: 820px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+#PageUpPeopleLink {
+    text-align: center;
+}
+
+div#job span{
+  float: none !important;
+}
+
+.apply-link {
+  background-color: #1cabe2;
+  border-color: #1cabe2;
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: 6px;
+  display: block;
+  text-decoration: none;
+  box-shadow: 0 1px 4px 1px rgba(0,0,0,.25);
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 124px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.apply-link:hover {
+  background-color: #0e95ca;
+}
+a.apply-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  margin-top: 10px;
+}
+
+.tag-based-search-result .row-content--text h4 a.job-link {
+    color: black !important;
+    text-decoration: none;
+}
+
+.tag-based-search-result .row-content--text h4 a.job-link:hover {
+    text-decoration: underline;
+}
+@media only screen and (max-width:480px) {
+  .row--teaser > p:nth-child(2) {
+    display: none;
+}
+}
+input#job-mail-subscribe-email {
+    width: 100%;
+    font-size: 14px;
+}
+div#job-mail-content {
+    position: absolute;
+    margin-left: -60px;
+}
+#job-mail #job-mail-trigger {
+  color: #1cabe2;
+  background: none  !important;
+}
+
+ul#social-media-list {
+    font-size: 22px;
+}
+
+.path-search .solrsearch-facet-selected {
+    width: 100%;
+    max-width: 1120px;
+    text-align: left;
+    padding-top: 10px;
+    margin: 0 auto !important;
+}
+.path-search .solrsearch-facet-selected .facet-remove {
+  padding: 5px 5px 5px 8px !important;
+}
+
+.row-content > .col-md-9 {
+    width: 100% !important;
+}
+
+/* BEGIN UNICEF Icons fonts */
+@font-face {
+  font-family: 'Unicef';
+  src: url('https://publicstorage.dc7.pageuppeople.com/671/ClientPublicFile/08100213-b3be-4fcc-a7b0-fb3407e930e7.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+/* END UNICEF Icons fonts */
+/* BEGIN UNICEF Logo fonts */
+@font-face {
+  font-family: 'Unicef-Logos';
+  src: url('https://publicstorage.dc7.pageuppeople.com/671/ClientPublicFile/9800346e-d3ed-4e50-a5e6-8b3dd930aa50.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+/* END UNICEF Logo fonts */
+/* BEGIN Font-awesome Icons fonts */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('https://publicstorage.dc7.pageuppeople.com/671/ClientPublicFile/3a4d4338-07dc-43c4-8de6-01333111f7ff.ttf') format('truetype');
+  font-style: normal;
+}
+
+.more-link.button {
+  border-width: 3px;
+  border-style: solid;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: bold;
+  max-width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  min-width: 160px;
+  word-wrap: break-word;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  margin-top: 20px;
+}
+
+#recent-jobs > p {
+    text-align: center;
+}
+
+#social-media > div > h2 {
+  font-size: 24px;
+}
+#social-media > div > h2 > span {
+  float: left !important;
+    margin: 0 !important;
+}
+.addthis_default_style .addthis_separator, .addthis_default_style .at4-icon, .addthis_default_style .at300b, .addthis_default_style .at300bo, .addthis_default_style .at300bs, .addthis_default_style .at300m {
+    float: none !important;
+}
+
+ul#social-media-list {
+    font-size: 22px;
+    float: left;
+}
+
+#social-media > div > h2 {
+    float: left !important;
+}
+
+
+.at-icon {
+    width: 24px !important;
+    height: 24px !important;
+    padding: 3px;
+}
+
+a .at-icon-wrapper {
+    height: 24px !important;
+    width: 24px !important;
+    border-radius: 20px;
+    margin-top: 2px;
+}
+
+.addthis_toolbox > span.addthis_separator {
+  float: left !important;
+  margin: 5 10;
+  font-size: 24px;
+}
+.addthis_button_expanded > span.at-icon-wrapper {
+    margin-right: 10px;
+}
+
+.view-empty {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*--><!]]>*/
+</style>
+
+<link href="https://careers-static.pageuppeople.com/jobs-shared-010005202249131221250017020413143166133192.css" rel="stylesheet" type="text/css" /> <script src="https://careers-static.pageuppeople.com/Jobs-19327247541906514377128227742402619313365.js" type="text/javascript"></script>
+<![if !IE 6]>
+<script src="https://s7.addthis.com/js/250/addthis_widget.js#username=pageup"></script>
+<![endif]>
+	<script>PU.Jobs.source = {"instId":671,"sourcePointer":"cw","language":"en-us","baseDomain":"https://jobs.unicef.org","dynamicTemplate":true,"action":"Listing"};PU.Analytics.init({"TrackingId":"UA-3555366-20","InstanceTrackingId":"UA-72609249-1"});</script><form action="/en-us/search/" method="get" id="jobs-form" class="careers-browse">
+
+<div id="messages" style="display: none"><ul id="message-list" role="presentation"></ul></div>
+<div class="vancancySearchArea">
+
+<input aria-labelledby="title-search-keyword" type="text" id="search-keyword" name="search-keyword" class="text-input" placeholder="Search for jobs" value="">
+
+<div id="search-filters" ><style type = "text/css">
+  @font-face {
+  font-family: "Unicef-Logos";
+  src: url("https://publicstorage.dc7.pageuppeople.com/671/ClientPublicFile/b8b95e83-85b5-4347-9f41-a82e2ae1ce1d.ttf");
+  }
+</style>
+
+
+<span style="display:none;" id="title-filter-results">Filter results</span>
+<span style="display:none;" id="title-search-keyword">Search using keywords</span>
+<span style="display:none;" id="title-job-search">Search for jobs</span>
+
+<div class="search-filter-type">
+            <h3 id="title-work-type">Contract type</h3>
+            <div class="filter-wrapper"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-work-type"><ul class="filter" role="presentation">
+<li class="consultancy"><input type="checkbox" id="work-type_consultancy" name="work-type" value="Consultancy"  /><label for="work-type_consultancy">Consultancy</label></li>
+<li class="fixed-term-appointment"><input type="checkbox" id="work-type_fixedtermappointment" name="work-type" value="Fixed Term Appointment"  /><label for="work-type_fixedtermappointment">Fixed Term Appointment</label></li>
+<li class="internship"><input type="checkbox" id="work-type_internship" name="work-type" value="Internship"  /><label for="work-type_internship">Internship</label></li>
+<li class="temporary-appointment"><input type="checkbox" id="work-type_temporaryappointment" name="work-type" value="Temporary Appointment"  /><label for="work-type_temporaryappointment">Temporary Appointment</label></li></ul></fieldset></div>
+     </div>
+     <div class="search-filter-type">
+            <h3 id="title-location">Locations</h3>
+           <div class="filter-wrapper"><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-location div_location_1"><div id="div_location_1" class="filter-group-title">East Asia and Pacific Region</div><ul class="filter" role="presentation">
+<li class="australia"><input type="checkbox" id="location_australia" name="location" value="Australia"  /><label for="location_australia">Australia</label></li>
+<li class="bahrain"><input type="checkbox" id="location_bahrain" name="location" value="Bahrain"  /><label for="location_bahrain">Bahrain</label></li>
+<li class="brunei-darussal"><input type="checkbox" id="location_bruneidarussal" name="location" value="Brunei Darussal"  /><label for="location_bruneidarussal">Brunei Darussal</label></li>
+<li class="cambodia"><input type="checkbox" id="location_cambodia" name="location" value="Cambodia"  /><label for="location_cambodia">Cambodia</label></li>
+<li class="china"><input type="checkbox" id="location_china" name="location" value="China"  /><label for="location_china">China</label></li>
+<li class="cook-islands"><input type="checkbox" id="location_cookislands" name="location" value="Cook Islands"  /><label for="location_cookislands">Cook Islands</label></li>
+<li class="democratic-peoples-republic-of-korea"><input type="checkbox" id="location_democraticpeoplesrepublicofkorea" name="location" value="Democratic People’s Republic of Korea"  /><label for="location_democraticpeoplesrepublicofkorea">Democratic People’s Republic of Korea</label></li>
+<li class="fijipacific-island-countries"><input type="checkbox" id="location_fijipacificislandcountries" name="location" value="Fiji/Pacific Island Countries"  /><label for="location_fijipacificislandcountries">Fiji/Pacific Island Countries</label></li>
+<li class="hong-kong"><input type="checkbox" id="location_hongkong" name="location" value="Hong Kong"  /><label for="location_hongkong">Hong Kong</label></li>
+<li class="indonesia"><input type="checkbox" id="location_indonesia" name="location" value="Indonesia"  /><label for="location_indonesia">Indonesia</label></li>
+<li class="lao-peoples-democratic-republic"><input type="checkbox" id="location_laopeoplesdemocraticrepublic" name="location" value="Lao People’s Democratic Republic"  /><label for="location_laopeoplesdemocraticrepublic">Lao People’s Democratic Republic</label></li>
+<li class="macau"><input type="checkbox" id="location_macau" name="location" value="Macau"  /><label for="location_macau">Macau</label></li>
+<li class="malaysia"><input type="checkbox" id="location_malaysia" name="location" value="Malaysia"  /><label for="location_malaysia">Malaysia</label></li>
+<li class="marshall-islands"><input type="checkbox" id="location_marshallislands" name="location" value="Marshall Islands"  /><label for="location_marshallislands">Marshall Islands</label></li>
+<li class="micronesia"><input type="checkbox" id="location_micronesia" name="location" value="Micronesia"  /><label for="location_micronesia">Micronesia</label></li>
+<li class="mongolia"><input type="checkbox" id="location_mongolia" name="location" value="Mongolia"  /><label for="location_mongolia">Mongolia</label></li>
+<li class="myanmar"><input type="checkbox" id="location_myanmar" name="location" value="Myanmar"  /><label for="location_myanmar">Myanmar</label></li>
+<li class="nauru"><input type="checkbox" id="location_nauru" name="location" value="Nauru"  /><label for="location_nauru">Nauru</label></li>
+<li class="new-zealand"><input type="checkbox" id="location_newzealand" name="location" value="New Zealand"  /><label for="location_newzealand">New Zealand</label></li>
+<li class="niue"><input type="checkbox" id="location_niue" name="location" value="Niue"  /><label for="location_niue">Niue</label></li>
+<li class="palau"><input type="checkbox" id="location_palau" name="location" value="Palau"  /><label for="location_palau">Palau</label></li>
+<li class="papua-new-guinea"><input type="checkbox" id="location_papuanewguinea" name="location" value="Papua New Guinea"  /><label for="location_papuanewguinea">Papua New Guinea</label></li>
+<li class="philippines"><input type="checkbox" id="location_philippines" name="location" value="Philippines"  /><label for="location_philippines">Philippines</label></li>
+<li class="samoa"><input type="checkbox" id="location_samoa" name="location" value="Samoa"  /><label for="location_samoa">Samoa</label></li>
+<li class="singapore"><input type="checkbox" id="location_singapore" name="location" value="Singapore"  /><label for="location_singapore">Singapore</label></li>
+<li class="solomon-islands"><input type="checkbox" id="location_solomonislands" name="location" value="Solomon Islands"  /><label for="location_solomonislands">Solomon Islands</label></li>
+<li class="thailand"><input type="checkbox" id="location_thailand" name="location" value="Thailand"  /><label for="location_thailand">Thailand</label></li>
+<li class="timor-leste"><input type="checkbox" id="location_timorleste" name="location" value="Timor-Leste"  /><label for="location_timorleste">Timor-Leste</label></li>
+<li class="tonga"><input type="checkbox" id="location_tonga" name="location" value="Tonga"  /><label for="location_tonga">Tonga</label></li>
+<li class="viet-nam"><input type="checkbox" id="location_vietnam" name="location" value="Viet Nam"  /><label for="location_vietnam">Viet Nam</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-location div_location_2"><div id="div_location_2" class="filter-group-title">Eastern and Southern Africa Region</div><ul class="filter" role="presentation">
+<li class="angola"><input type="checkbox" id="location_angola" name="location" value="Angola"  /><label for="location_angola">Angola</label></li>
+<li class="comoros"><input type="checkbox" id="location_comoros" name="location" value="Comoros"  /><label for="location_comoros">Comoros</label></li>
+<li class="ethiopia"><input type="checkbox" id="location_ethiopia" name="location" value="Ethiopia"  /><label for="location_ethiopia">Ethiopia</label></li>
+<li class="kenya"><input type="checkbox" id="location_kenya" name="location" value="Kenya"  /><label for="location_kenya">Kenya</label></li>
+<li class="lesotho"><input type="checkbox" id="location_lesotho" name="location" value="Lesotho"  /><label for="location_lesotho">Lesotho</label></li>
+<li class="malawi"><input type="checkbox" id="location_malawi" name="location" value="Malawi"  /><label for="location_malawi">Malawi</label></li>
+<li class="mozambique"><input type="checkbox" id="location_mozambique" name="location" value="Mozambique"  /><label for="location_mozambique">Mozambique</label></li>
+<li class="namibia"><input type="checkbox" id="location_namibia" name="location" value="Namibia"  /><label for="location_namibia">Namibia</label></li>
+<li class="rwanda"><input type="checkbox" id="location_rwanda" name="location" value="Rwanda"  /><label for="location_rwanda">Rwanda</label></li>
+<li class="somalia"><input type="checkbox" id="location_somalia" name="location" value="Somalia"  /><label for="location_somalia">Somalia</label></li>
+<li class="south-sudan"><input type="checkbox" id="location_southsudan" name="location" value="South Sudan"  /><label for="location_southsudan">South Sudan</label></li>
+<li class="uganda"><input type="checkbox" id="location_uganda" name="location" value="Uganda"  /><label for="location_uganda">Uganda</label></li>
+<li class="zambia"><input type="checkbox" id="location_zambia" name="location" value="Zambia"  /><label for="location_zambia">Zambia</label></li>
+<li class="zimbabwe"><input type="checkbox" id="location_zimbabwe" name="location" value="Zimbabwe"  /><label for="location_zimbabwe">Zimbabwe</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-location div_location_3"><div id="div_location_3" class="filter-group-title">Europe and Central Asia Region</div><ul class="filter" role="presentation">
+<li class="azerbaijan"><input type="checkbox" id="location_azerbaijan" name="location" value="Azerbaijan"  /><label for="location_azerbaijan">Azerbaijan</label></li>
+<li class="belarus"><input type="checkbox" id="location_belarus" name="location" value="Belarus"  /><label for="location_belarus">Belarus</label></li>
+<li class="czech-republic"><input type="checkbox" id="location_czechrepublic" name="location" value="Czech Republic"  /><label for="location_czechrepublic">Czech Republic</label></li>
+<li class="georgia"><input type="checkbox" id="location_georgia" name="location" value="Georgia"  /><label for="location_georgia">Georgia</label></li>
+<li class="kyrgyzstan"><input type="checkbox" id="location_kyrgyzstan" name="location" value="Kyrgyzstan"  /><label for="location_kyrgyzstan">Kyrgyzstan</label></li>
+<li class="montenegro"><input type="checkbox" id="location_montenegro" name="location" value="Montenegro"  /><label for="location_montenegro">Montenegro</label></li>
+<li class="poland"><input type="checkbox" id="location_poland" name="location" value="Poland"  /><label for="location_poland">Poland</label></li>
+<li class="republic-of-moldova"><input type="checkbox" id="location_republicofmoldova" name="location" value="Republic of Moldova"  /><label for="location_republicofmoldova">Republic of Moldova</label></li>
+<li class="romania"><input type="checkbox" id="location_romania" name="location" value="Romania"  /><label for="location_romania">Romania</label></li>
+<li class="serbia"><input type="checkbox" id="location_serbia" name="location" value="Serbia"  /><label for="location_serbia">Serbia</label></li>
+<li class="slovakia"><input type="checkbox" id="location_slovakia" name="location" value="Slovakia"  /><label for="location_slovakia">Slovakia</label></li>
+<li class="tajikistan"><input type="checkbox" id="location_tajikistan" name="location" value="Tajikistan"  /><label for="location_tajikistan">Tajikistan</label></li>
+<li class="turkmenistan"><input type="checkbox" id="location_turkmenistan" name="location" value="Turkmenistan"  /><label for="location_turkmenistan">Turkmenistan</label></li>
+<li class="ukraine"><input type="checkbox" id="location_ukraine" name="location" value="Ukraine"  /><label for="location_ukraine">Ukraine</label></li>
+<li class="uzbekistan"><input type="checkbox" id="location_uzbekistan" name="location" value="Uzbekistan"  /><label for="location_uzbekistan">Uzbekistan</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-location div_location_4"><div id="div_location_4" class="filter-group-title">Headquarters</div><ul class="filter" role="presentation">
+<li class="denmark"><input type="checkbox" id="location_denmark" name="location" value="Denmark"  /><label for="location_denmark">Denmark</label></li>
+<li class="hungary"><input type="checkbox" id="location_hungary" name="location" value="Hungary"  /><label for="location_hungary">Hungary</label></li>
+<li class="italy"><input type="checkbox" id="location_italy" name="location" value="Italy"  /><label for="location_italy">Italy</label></li>
+<li class="spain"><input type="checkbox" id="location_spain" name="location" value="Spain"  /><label for="location_spain">Spain</label></li>
+<li class="sweden"><input type="checkbox" id="location_sweden" name="location" value="Sweden"  /><label for="location_sweden">Sweden</label></li>
+<li class="switzerland"><input type="checkbox" id="location_switzerland" name="location" value="Switzerland"  /><label for="location_switzerland">Switzerland</label></li>
+<li class="united-kingdom"><input type="checkbox" id="location_unitedkingdom" name="location" value="United Kingdom"  /><label for="location_unitedkingdom">United Kingdom</label></li>
+<li class="united-states"><input type="checkbox" id="location_unitedstates" name="location" value="United States"  /><label for="location_unitedstates">United States</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-location div_location_5"><div id="div_location_5" class="filter-group-title">Latin America and Caribbean Region</div><ul class="filter" role="presentation">
+<li class="argentina"><input type="checkbox" id="location_argentina" name="location" value="Argentina"  /><label for="location_argentina">Argentina</label></li>
+<li class="barbados"><input type="checkbox" id="location_barbados" name="location" value="Barbados"  /><label for="location_barbados">Barbados</label></li>
+<li class="belize"><input type="checkbox" id="location_belize" name="location" value="Belize"  /><label for="location_belize">Belize</label></li>
+<li class="chile"><input type="checkbox" id="location_chile" name="location" value="Chile"  /><label for="location_chile">Chile</label></li>
+<li class="colombia"><input type="checkbox" id="location_colombia" name="location" value="Colombia"  /><label for="location_colombia">Colombia</label></li>
+<li class="costa-rica"><input type="checkbox" id="location_costarica" name="location" value="Costa Rica"  /><label for="location_costarica">Costa Rica</label></li>
+<li class="dominican-republic"><input type="checkbox" id="location_dominicanrepublic" name="location" value="Dominican Republic"  /><label for="location_dominicanrepublic">Dominican Republic</label></li>
+<li class="eastern-caribbean"><input type="checkbox" id="location_easterncaribbean" name="location" value="Eastern Caribbean"  /><label for="location_easterncaribbean">Eastern Caribbean</label></li>
+<li class="ecuador"><input type="checkbox" id="location_ecuador" name="location" value="Ecuador"  /><label for="location_ecuador">Ecuador</label></li>
+<li class="el-salvador"><input type="checkbox" id="location_elsalvador" name="location" value="El Salvador"  /><label for="location_elsalvador">El Salvador</label></li>
+<li class="guatemala"><input type="checkbox" id="location_guatemala" name="location" value="Guatemala"  /><label for="location_guatemala">Guatemala</label></li>
+<li class="guyana"><input type="checkbox" id="location_guyana" name="location" value="Guyana"  /><label for="location_guyana">Guyana</label></li>
+<li class="haiti"><input type="checkbox" id="location_haiti" name="location" value="Haiti"  /><label for="location_haiti">Haiti</label></li>
+<li class="honduras"><input type="checkbox" id="location_honduras" name="location" value="Honduras"  /><label for="location_honduras">Honduras</label></li>
+<li class="mexico"><input type="checkbox" id="location_mexico" name="location" value="Mexico"  /><label for="location_mexico">Mexico</label></li>
+<li class="nicaragua"><input type="checkbox" id="location_nicaragua" name="location" value="Nicaragua"  /><label for="location_nicaragua">Nicaragua</label></li>
+<li class="panama"><input type="checkbox" id="location_panama" name="location" value="Panama"  /><label for="location_panama">Panama</label></li>
+<li class="peru"><input type="checkbox" id="location_peru" name="location" value="Peru"  /><label for="location_peru">Peru</label></li>
+<li class="suriname"><input type="checkbox" id="location_suriname" name="location" value="Suriname"  /><label for="location_suriname">Suriname</label></li>
+<li class="uruguay"><input type="checkbox" id="location_uruguay" name="location" value="Uruguay"  /><label for="location_uruguay">Uruguay</label></li>
+<li class="venezuela"><input type="checkbox" id="location_venezuela" name="location" value="Venezuela"  /><label for="location_venezuela">Venezuela</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-location div_location_6"><div id="div_location_6" class="filter-group-title">Middle East and North Africa Region</div><ul class="filter" role="presentation">
+<li class="djibouti"><input type="checkbox" id="location_djibouti" name="location" value="Djibouti"  /><label for="location_djibouti">Djibouti</label></li>
+<li class="egypt"><input type="checkbox" id="location_egypt" name="location" value="Egypt"  /><label for="location_egypt">Egypt</label></li>
+<li class="jordan"><input type="checkbox" id="location_jordan" name="location" value="Jordan"  /><label for="location_jordan">Jordan</label></li>
+<li class="lebanon"><input type="checkbox" id="location_lebanon" name="location" value="Lebanon"  /><label for="location_lebanon">Lebanon</label></li>
+<li class="sudan"><input type="checkbox" id="location_sudan" name="location" value="Sudan"  /><label for="location_sudan">Sudan</label></li>
+<li class="tunisia"><input type="checkbox" id="location_tunisia" name="location" value="Tunisia"  /><label for="location_tunisia">Tunisia</label></li>
+<li class="yemen"><input type="checkbox" id="location_yemen" name="location" value="Yemen"  /><label for="location_yemen">Yemen</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-location div_location_7"><div id="div_location_7" class="filter-group-title">South Asia Region</div><ul class="filter" role="presentation">
+<li class="afghanistan"><input type="checkbox" id="location_afghanistan" name="location" value="Afghanistan"  /><label for="location_afghanistan">Afghanistan</label></li>
+<li class="bangladesh"><input type="checkbox" id="location_bangladesh" name="location" value="Bangladesh"  /><label for="location_bangladesh">Bangladesh</label></li>
+<li class="india"><input type="checkbox" id="location_india" name="location" value="India"  /><label for="location_india">India</label></li>
+<li class="maldives"><input type="checkbox" id="location_maldives" name="location" value="Maldives"  /><label for="location_maldives">Maldives</label></li>
+<li class="nepal"><input type="checkbox" id="location_nepal" name="location" value="Nepal"  /><label for="location_nepal">Nepal</label></li>
+<li class="pakistan"><input type="checkbox" id="location_pakistan" name="location" value="Pakistan"  /><label for="location_pakistan">Pakistan</label></li>
+<li class="sri-lanka"><input type="checkbox" id="location_srilanka" name="location" value="Sri Lanka"  /><label for="location_srilanka">Sri Lanka</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-location div_location_8"><div id="div_location_8" class="filter-group-title">West and Central Africa Region</div><ul class="filter" role="presentation">
+<li class="benin"><input type="checkbox" id="location_benin" name="location" value="Benin"  /><label for="location_benin">Benin</label></li>
+<li class="burkina-faso"><input type="checkbox" id="location_burkinafaso" name="location" value="Burkina Faso"  /><label for="location_burkinafaso">Burkina Faso</label></li>
+<li class="cameroon"><input type="checkbox" id="location_cameroon" name="location" value="Cameroon"  /><label for="location_cameroon">Cameroon</label></li>
+<li class="chad"><input type="checkbox" id="location_chad" name="location" value="Chad"  /><label for="location_chad">Chad</label></li>
+<li class="congo"><input type="checkbox" id="location_congo" name="location" value="Congo"  /><label for="location_congo">Congo</label></li>
+<li class="democratic-republic-of-congo"><input type="checkbox" id="location_democraticrepublicofcongo" name="location" value="Democratic Republic of Congo"  /><label for="location_democraticrepublicofcongo">Democratic Republic of Congo</label></li>
+<li class="equatorial-guinea"><input type="checkbox" id="location_equatorialguinea" name="location" value="Equatorial Guinea"  /><label for="location_equatorialguinea">Equatorial Guinea</label></li>
+<li class="gabon"><input type="checkbox" id="location_gabon" name="location" value="Gabon"  /><label for="location_gabon">Gabon</label></li>
+<li class="gambia"><input type="checkbox" id="location_gambia" name="location" value="Gambia"  /><label for="location_gambia">Gambia</label></li>
+<li class="ghana"><input type="checkbox" id="location_ghana" name="location" value="Ghana"  /><label for="location_ghana">Ghana</label></li>
+<li class="guinea-bissau"><input type="checkbox" id="location_guineabissau" name="location" value="Guinea-Bissau"  /><label for="location_guineabissau">Guinea-Bissau</label></li>
+<li class="liberia"><input type="checkbox" id="location_liberia" name="location" value="Liberia"  /><label for="location_liberia">Liberia</label></li>
+<li class="mali"><input type="checkbox" id="location_mali" name="location" value="Mali"  /><label for="location_mali">Mali</label></li>
+<li class="mauritania"><input type="checkbox" id="location_mauritania" name="location" value="Mauritania"  /><label for="location_mauritania">Mauritania</label></li>
+<li class="niger"><input type="checkbox" id="location_niger" name="location" value="Niger"  /><label for="location_niger">Niger</label></li>
+<li class="sao-tome-and-principe"><input type="checkbox" id="location_saotomeandprincipe" name="location" value="Sao Tome And Principe"  /><label for="location_saotomeandprincipe">Sao Tome And Principe</label></li>
+<li class="senegal"><input type="checkbox" id="location_senegal" name="location" value="Senegal"  /><label for="location_senegal">Senegal</label></li>
+<li class="sierra-leone"><input type="checkbox" id="location_sierraleone" name="location" value="Sierra Leone"  /><label for="location_sierraleone">Sierra Leone</label></li>
+<li class="togo"><input type="checkbox" id="location_togo" name="location" value="Togo"  /><label for="location_togo">Togo</label></li></ul></fieldset></div></div>
+     </div>
+      <div class="search-filter-type">
+           <h3 id="title-category">Functional Area</h3>
+           <div class="filter-wrapper"><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_1"><div id="div_category_1" class="filter-group-title">Emergency</div><ul class="filter" role="presentation">
+<li class="emergency"><input type="checkbox" id="category_emergency" name="category" value="Emergency"  /><label for="category_emergency">Emergency</label></li>
+<li class="security"><input type="checkbox" id="category_security" name="category" value="Security"  /><label for="category_security">Security</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_2"><div id="div_category_2" class="filter-group-title">External Relations</div><ul class="filter" role="presentation">
+<li class="communication"><input type="checkbox" id="category_communication" name="category" value="Communication"  /><label for="category_communication">Communication</label></li>
+<li class="fund-raising"><input type="checkbox" id="category_fundraising" name="category" value="Fund Raising"  /><label for="category_fundraising">Fund Raising</label></li>
+<li class="partnerships"><input type="checkbox" id="category_partnerships" name="category" value="Partnerships"  /><label for="category_partnerships">Partnerships</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_3"><div id="div_category_3" class="filter-group-title">Management</div><ul class="filter" role="presentation">
+<li class="audit-and-investigation"><input type="checkbox" id="category_auditandinvestigation" name="category" value="Audit and Investigation"  /><label for="category_auditandinvestigation">Audit and Investigation</label></li>
+<li class="executive-management"><input type="checkbox" id="category_executivemanagement" name="category" value="Executive Management"  /><label for="category_executivemanagement">Executive Management</label></li>
+<li class="senior-leadership-vacancies"><input type="checkbox" id="category_seniorleadershipvacancies" name="category" value="Senior Leadership Vacancies"  /><label for="category_seniorleadershipvacancies">Senior Leadership Vacancies</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_4"><div id="div_category_4" class="filter-group-title">Operations</div><ul class="filter" role="presentation">
+<li class="administration"><input type="checkbox" id="category_administration" name="category" value="Administration"  /><label for="category_administration">Administration</label></li>
+<li class="facilities-management"><input type="checkbox" id="category_facilitiesmanagement" name="category" value="Facilities Management"  /><label for="category_facilitiesmanagement">Facilities Management</label></li>
+<li class="financial-management"><input type="checkbox" id="category_financialmanagement" name="category" value="Financial Management"  /><label for="category_financialmanagement">Financial Management</label></li>
+<li class="human-resources"><input type="checkbox" id="category_humanresources" name="category" value="Human Resources"  /><label for="category_humanresources">Human Resources</label></li>
+<li class="information-communication-technology"><input type="checkbox" id="category_informationcommunicationtechnology" name="category" value="Information Communication Technology"  /><label for="category_informationcommunicationtechnology">Information Communication Technology</label></li>
+<li class="legal-affairs"><input type="checkbox" id="category_legalaffairs" name="category" value="Legal Affairs"  /><label for="category_legalaffairs">Legal Affairs</label></li>
+<li class="operations"><input type="checkbox" id="category_operations" name="category" value="Operations"  /><label for="category_operations">Operations</label></li>
+<li class="supply-management"><input type="checkbox" id="category_supplymanagement" name="category" value="Supply Management"  /><label for="category_supplymanagement">Supply Management</label></li>
+<li class="transportation"><input type="checkbox" id="category_transportation" name="category" value="Transportation"  /><label for="category_transportation">Transportation</label></li></ul></fieldset></div><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-category div_category_5"><div id="div_category_5" class="filter-group-title">Programme and Policy</div><ul class="filter" role="presentation">
+<li class="adolescent-development"><input type="checkbox" id="category_adolescentdevelopment" name="category" value="Adolescent Development"  /><label for="category_adolescentdevelopment">Adolescent Development</label></li>
+<li class="child-protection"><input type="checkbox" id="category_childprotection" name="category" value="Child Protection"  /><label for="category_childprotection">Child Protection</label></li>
+<li class="early-childhood-development"><input type="checkbox" id="category_earlychildhooddevelopment" name="category" value="Early Childhood Development"  /><label for="category_earlychildhooddevelopment">Early Childhood Development</label></li>
+<li class="education"><input type="checkbox" id="category_education" name="category" value="Education"  /><label for="category_education">Education</label></li>
+<li class="gender-development"><input type="checkbox" id="category_genderdevelopment" name="category" value="Gender Development"  /><label for="category_genderdevelopment">Gender Development</label></li>
+<li class="health"><input type="checkbox" id="category_health" name="category" value="Health"  /><label for="category_health">Health</label></li>
+<li class="health-and-nutrition"><input type="checkbox" id="category_healthandnutrition" name="category" value="Health and Nutrition"  /><label for="category_healthandnutrition">Health and Nutrition</label></li>
+<li class="hivaids"><input type="checkbox" id="category_hivaids" name="category" value="HIV/AIDS"  /><label for="category_hivaids">HIV/AIDS</label></li>
+<li class="innovation"><input type="checkbox" id="category_innovation" name="category" value="Innovation"  /><label for="category_innovation">Innovation</label></li>
+<li class="knowledge-management"><input type="checkbox" id="category_knowledgemanagement" name="category" value="Knowledge Management"  /><label for="category_knowledgemanagement">Knowledge Management</label></li>
+<li class="nutrition"><input type="checkbox" id="category_nutrition" name="category" value="Nutrition"  /><label for="category_nutrition">Nutrition</label></li>
+<li class="programme-management"><input type="checkbox" id="category_programmemanagement" name="category" value="Programme Management"  /><label for="category_programmemanagement">Programme Management</label></li>
+<li class="research-planning-monitoring-and-evaluation"><input type="checkbox" id="category_researchplanningmonitoringandevaluation" name="category" value="Research Planning Monitoring and Evaluation"  /><label for="category_researchplanningmonitoringandevaluation">Research, Planning, Monitoring and Evaluation</label></li>
+<li class="social-and-behavior-change"><input type="checkbox" id="category_socialandbehaviorchange" name="category" value="Social and Behavior Change"  /><label for="category_socialandbehaviorchange">Social and Behavior Change</label></li>
+<li class="social-policy"><input type="checkbox" id="category_socialpolicy" name="category" value="Social Policy"  /><label for="category_socialpolicy">Social Policy</label></li>
+<li class="un-volunteer"><input type="checkbox" id="category_unvolunteer" name="category" value="UN Volunteer"  /><label for="category_unvolunteer">UN Volunteer</label></li>
+<li class="wash-water-sanitation-and-hygiene"><input type="checkbox" id="category_washwatersanitationandhygiene" name="category" value="WASH (Water Sanitation and Hygiene)"  /><label for="category_washwatersanitationandhygiene">WASH (Water, Sanitation and Hygiene)</label></li></ul></fieldset></div></div>
+      </div>
+     <div class="search-filter-type">
+      <h3 id="title-pay-scale">Position level </h3>
+         <div class="filter-wrapper"><div class="filter-group"><fieldset style="border: 0;margin: 0;padding: 0;" role="group" aria-labelledby="title-pay-scale div_pay-scale_1"><div id="div_pay-scale_1" class="filter-group-title"></div><ul class="filter" role="presentation">
+<li class="consultancy"><input type="checkbox" id="pay-scale_consultancy" name="pay-scale" value="Consultancy"  /><label for="pay-scale_consultancy">Consultancy</label></li>
+<li class="d-2"><input type="checkbox" id="pay-scale_d2" name="pay-scale" value="D-2"  /><label for="pay-scale_d2">D-2</label></li>
+<li class="g-2"><input type="checkbox" id="pay-scale_g2" name="pay-scale" value="G-2"  /><label for="pay-scale_g2">G-2</label></li>
+<li class="g-3"><input type="checkbox" id="pay-scale_g3" name="pay-scale" value="G-3"  /><label for="pay-scale_g3">G-3</label></li>
+<li class="g-4"><input type="checkbox" id="pay-scale_g4" name="pay-scale" value="G-4"  /><label for="pay-scale_g4">G-4</label></li>
+<li class="g-5"><input type="checkbox" id="pay-scale_g5" name="pay-scale" value="G-5"  /><label for="pay-scale_g5">G-5</label></li>
+<li class="g-6"><input type="checkbox" id="pay-scale_g6" name="pay-scale" value="G-6"  /><label for="pay-scale_g6">G-6</label></li>
+<li class="g-7"><input type="checkbox" id="pay-scale_g7" name="pay-scale" value="G-7"  /><label for="pay-scale_g7">G-7</label></li>
+<li class="internship"><input type="checkbox" id="pay-scale_internship" name="pay-scale" value="Internship"  /><label for="pay-scale_internship">Internship</label></li>
+<li class="no-1"><input type="checkbox" id="pay-scale_no1" name="pay-scale" value="NO-1"  /><label for="pay-scale_no1">NO-1</label></li>
+<li class="no-2"><input type="checkbox" id="pay-scale_no2" name="pay-scale" value="NO-2"  /><label for="pay-scale_no2">NO-2</label></li>
+<li class="no-3"><input type="checkbox" id="pay-scale_no3" name="pay-scale" value="NO-3"  /><label for="pay-scale_no3">NO-3</label></li>
+<li class="no-4"><input type="checkbox" id="pay-scale_no4" name="pay-scale" value="NO-4"  /><label for="pay-scale_no4">NO-4</label></li>
+<li class="p-2"><input type="checkbox" id="pay-scale_p2" name="pay-scale" value="P-2"  /><label for="pay-scale_p2">P-2</label></li>
+<li class="p-3"><input type="checkbox" id="pay-scale_p3" name="pay-scale" value="P-3"  /><label for="pay-scale_p3">P-3</label></li>
+<li class="p-4"><input type="checkbox" id="pay-scale_p4" name="pay-scale" value="P-4"  /><label for="pay-scale_p4">P-4</label></li>
+<li class="p-5"><input type="checkbox" id="pay-scale_p5" name="pay-scale" value="P-5"  /><label for="pay-scale_p5">P-5</label></li></ul></fieldset></div></div>
+     </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+      function jobLoaded () {
+        $(document).ready(function(){
+           PU.Animate.getScroll = function () {
+             return 0;
+           };
+           $("html, body").animate({ scrollTop: $('#search-keyword').offset().top}, 1000);
+        });
+      }
+      PU.Callback.add('job', 'loaded', jobLoaded);
+  <script>
+jQuery.noConflict();
+jQuery(document).ready(function ( ) {linkedInTrack(); });
+function linkedInTrack() {
+ 
+  const item = document.querySelectorAll(".apply-link");
+
+item.forEach(link => {
+  link.addEventListener("click", function () {
+  window.lintrk('track', { conversion_id: 5006777 });
+  });
+});
+ 
+
+};;
+PU.Callback.add('job', 'loaded', linkedInTrack);
+</script>
+ </script><input id="filter-results-submit" type="submit" class="button" value="Filter search results"></div>
+</div>
+<div id="waiting" class="waiting" style="display: none;"></div><div id="job" style="display:none"><div id="job-content"></div></div><div id="search-results" style="display:none">
+  
+<div id="job-mail" class="script">
+    <a id="job-mail-trigger" href="/en-us/listing/">Send me jobs like these</a>
+    <div id="job-mail-content">
+        <div id="job-mail-subscribe">
+            <p>We will email you new jobs that match this search.</p>
+            
+<div id="job-mail-email">
+    <input aria-label="Email address" type="email" id="job-mail-subscribe-email" name="job-mail-subscribe-email" class="text-input" placeholder="address@example.com" value="" aria-required="true">
+</div>
+<p id="job-mail-subscribed" class="success" style="display: none;">Great, we can send you jobs like this, if this is your first time signing up, please check your inbox to confirm your subscription.</p>
+<p id="job-mail-error" class="error" style="display: none;" >The email address was invalid, please check for errors.</p>
+<p id="job-mail-agreed" class="error" style="display: none;" >You must agree to the privacy statement</p>
+<label for="job-mail-subscribe-button" style="display: none;">Subscribe</label>
+<script src='https://www.recaptcha.net/recaptcha/api.js'></script>
+
+<label aria-hidden="true" for="g-recaptcha-response" style="display: none">Recaptcha</label>
+<div class="g-recaptcha" data-sitekey="6LeC1A0UAAAAAPZK8E1CxJkweNzEiOuWfqJ63a0v"></div>
+
+<input type="submit" id="job-mail-subscribe-button" name="job-mail-subscribe-button" class="button" value="Subscribe">
+
+    <label aria-hidden="true" for="job-mail-subscribe-privacy" style="display: none;">Privacy agreement</label>
+    <input aria-hidden="true" type="checkbox" id="job-mail-subscribe-privacy" name="job-mail-subscribe-privacy" value="agree" checked="true" style="display: none;" />
+
+        </div>
+    </div>
+</div>
+  <div class="tag-based-search-result">
+   
+<div id="search-results-content">
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553145/communication-specialist-producervideographer-p3-ta-364-days-121230-marketing-and-pr-services-pfp-geneva-switzerland">Communication Specialist (Producer/Videographer), P-3, TA (364 days), # 121230, Marketing and PR Services  PFP, Geneva, Switzerland</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>.</p>
+               <p><b>Location:</b> <span class="location">Switzerland</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T21:55:00Z">4 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553175/internal-and-external-vacancy-announcement-monitoring-officer-nob-position-no-120907-maputo-mozambique-open-for-nationals-of-mozambique-only">Internal and External Vacancy Announcement: Monitoring Officer, NOB, Position No. 120907, Maputo, Mozambique (Open for nationals of Mozambique only)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>The Monitoring and Evaluation Officer is accountable for the accomplishment of the stated key end-results by providing professional expertise and assistance in information/data collection, statistics and data analysis, monitoring & evaluation (M&E), preparation of reports, communication and partnership, and in implementing training programmes for national and sub-national data collection, providing support in KPIs reporting, monitoring, evaluation and research capacity building with special attention to the interest, concern and participation of primary stakeholders.</p>
+               <p><b>Location:</b> <span class="location">Mozambique</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-03T21:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553203/senior-information-comm-technology-associate-gs7-male-maldives">Senior Information Comm. Technology Associate, GS7, Male', Maldives.</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>UNICEF Maldives has an exciting opportunity for a Senior Information Comms. & Technology Associate. All qualified individuals are encouraged to apply!</p>
+               <p><b>Location:</b> <span class="location">Maldives</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T13:00:00Z">4 Aug 2022 06:00 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/550680/readvertisement-early-childhood-development-ecd-officer-no2-bucharest-romania-temporary-appointment-364-days">Re-advertisement: Early Childhood Development (ECD) Officer, NO-2,  Bucharest, Romania, (Temporary Appointment, 364 days)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>The ECD Officer provides technical assistance to develop and implement models for alternative early childhood education and care services for refugee children. He/she coordinates with relevant stakeholders to document and scale up ECD/ ECEC interventions within the the Refugees Response Plan (RRP).</p>
+               <p><b>Location:</b> <span class="location">Romania</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-03T20:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/552658/readvertisement-individual-contractor-accountability-to-affected-populations-aap-and-protection-from-sexual-exploitation-and-abuse-psea-coordinator-115-months-full-time-office-based-mena-regional-office">Re-advertisement: Individual Contractor - Accountability to Affected Populations (AAP) and Protection from Sexual Exploitation and Abuse (PSEA) Coordinator, 11.5 months - Full Time, Office Based - MENA Regional  oFFICE</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>The post holder will support the planning, monitoring and scaling up of VoC initiative as part of the broader
+approach and ongoing work to strengthen UNICEF and AAP and PSEA programming across the region. The Coordinator
+will also contribute to the organization of regional VoC /AAP lessons learned workshop/s.</p>
+               <p><b>Location:</b> <span class="location">Jordan</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-29T20:55:00Z">29 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553204/emergency-specialist-p4-kyiv-ukraine-temporary-appointment-364-days">Emergency Specialist, P-4, Kyiv, Ukraine (Temporary Appointment - 364 days)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>Under the direction and guidance of the Senior Emergency Coordinator, the Emergency Specialist coordinates overall country office emergency preparedness and response. He/ She is responsible for the development, planning, implementation, monitoring and evaluation of the emergency interventions, including fund-raising for emergency activities, to ensure the survival and well-being of children and mothers and affected communities in emergency. He/ She provides coordination and support for policy and programme planning and management in UNICEF supported emergency programmes in Ukraine</p>
+               <p><b>Location:</b> <span class="location">Ukraine</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-28T20:55:00Z">28 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553172/programme-associate-gs6-male-maldives">Programme Associate GS6, Male', Maldives</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>UNICEF Maldives is looking for a dynamic Programme Associate to support UNICEF Maldives programmes.</p>
+               <p><b>Location:</b> <span class="location">Maldives</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T13:00:00Z">4 Aug 2022 06:00 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553161/senior-supply-associate-gs7-colombo-sri-lanka-sri-lankan-nationals-only">Senior Supply Associate, (GS-7), Colombo, Sri Lanka (Sri Lankan nationals only)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>Under the overall supervision of the Supply Officer, Senior Supply Associate will perform independently supply documentation; local procurement and record maintenance relating to such functions within the described spheres.</p>
+               <p><b>Location:</b> <span class="location">Sri Lanka</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-31T18:25:00Z">31 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553090/консультант-для-работы-с-социальными-медиа-smm-специалист-только-граждане-кыргызстана-115-месяцев">Консультант для работы с социальными медиа (SMM специалист). Только граждане Кыргызстана (11.5 месяцев)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>Коммуникационный отдел ЮНИСЕФ в Кыргызстане ищет консультанта для работы с социальными медиа (SMM). Под руководством Координатора по коммуникациям, SMM специалист будет вести аккаунты ЮНИСЕФ во всех социальных медиа, мониторить эффективность работы, а также будет принимать участие в разработке и реализации онлайн кампаний, включая разработку планов для социальных сетей в рамках различных коммуникационных планов и планов упоминаемости в СМИ.</p>
+               <p><b>Location:</b> <span class="location">Kyrgyzstan</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T17:55:00Z">4 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553159/international-consultantcy-to-support-the-gender-programmatic-review-of-the-unicef-cambodia-country-office-programme-phnom-penh-cambodia">International Consultantcy to support the Gender Programmatic Review of the UNICEF Cambodia Country Office Programme, Phnom Penh, Cambodia</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>The United Nations Children’s Fund (UNICEF) in Phnom Penh, Cambodia is looking for an international consultant to to lead and support the undertaking of a Gender Programmatic Review (GPR) in the UNICEF Cambodia Country Office in order to shape, refine and align the new country programme document (CPD) with the new UNICEF Gender Action Plan (GAP 2022-25).  
+If you are passionate about making a lasting difference for children in Cambodia, UNICEF would like to hear from you.</p>
+               <p><b>Location:</b> <span class="location">Cambodia</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-03T16:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553193/child-protection-officer-no2-port-vila-vanuatu-51903">Child Protection Officer, NO2,  Port Vila, Vanuatu (#:51903)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>The UNICEF Pacific Multi-Country Office is looking to recruit a Child Protection Officer at the NoB level to be based in Port Vila, Vanuatu. 
+This position is open only to Ni-Vanuatu Nationals</p>
+               <p><b>Location:</b> <span class="location">Fiji/Pacific Island Countries</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-08T11:55:00Z">8 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553196/consultancy-editor-6-months-parttime-remote-office-of-internal-audit-and-investigations">CONSULTANCY: Editor (6 months, part-time, remote), Office of Internal Audit and Investigations</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>In pursuit of its mandate, the Office of Internal Audit and Investigations in UNICEF is looking for an individual to assist in the editorial and quality assurance process for finalizing reports and other written outputs, including internal audit and investigative reports.</p>
+               <p><b>Location:</b> <span class="location">United States</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T03:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553182/social-behavior-change-specialist-noc-temporary-appointment-364-days-bratislava-slovakia-for-slovak-nationals-only">Social & Behavior Change Specialist, NOC, (Temporary Appointment, 364 days) Bratislava, Slovakia (For Slovak Nationals Only)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>UNICEF Refugee response in Bratislava, Slovakia is urgently looking for a dedicated Social & Behavior Change Specialist to join our team. 
+If you are passionate about joining UNICEF in supporting emergency response to Ukraine and neighboring countries, we would like to hear from you.
+
+Basic annual salary for this position is from 59,440.59 Euro to 69,276.99 Euro, subject to the deductions for pension and medical insurance. Final estimation will be reflected in the offer letter of a successful candidate.</p>
+               <p><b>Location:</b> <span class="location">Slovakia</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-03T21:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553188/consultoría-para-la-preparación-del-documento-plan-de-gestión-del-programa-de-país-cpmp-20232026-de-unicef-ecuador">Consultoría para la preparación del documento Plan de Gestión del Programa de País (CPMP) 2023-2026 de UNICEF Ecuador</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>La Oficina de UNICEF en Ecuador debe preparar su Plan de Gestión del Programa de País (CPMP) 2023-2026. El CPMP es un documento estratégico de planificación que describe la principal estructura y mecanismos de gestión para apoyar la implementación del Programa de País (CPD) y el logro de sus resultados propuestos. El presupuesto integrado (IB) es una parte integral del proceso de preparación del CPMP y consolida los planes para la utilización de todos los recursos disponibles que dispone la Oficina de País, vinculándolos con sus programas, la efectividad de cada uno de ellos y los resultados de la gestión.</p>
+               <p><b>Location:</b> <span class="location">Ecuador</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T04:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553099/supply-logistics-officer-no2-maputo-mozambique-47080-open-to-mozambique-nationals-only">Supply & Logistics Officer, NO-2, Maputo, Mozambique #47080 (Open to Mozambique nationals only)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>The Supply Logistic Officer reports to the Supply and Logistics Manager as per the Country Office set-up for supervision and guidance.  The Supply Logistics Officer provides technical and operational support as per the Country Office (CO) set-up and is responsible for managing the supply chains of a medium sized country office, or elements of the supply chains of a larger supply operation. The supply chain operations include planning, procurement, contracting, customs clearance, warehousing, in country transport and distribution, as well as monitoring of supplies, services and construction works.</p>
+               <p><b>Location:</b> <span class="location">Mozambique</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-02T21:55:00Z">2 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553132/internship-child-survival-and-development-bissau-guineabissau">Internship Child survival and Development, Bissau, Guinea-Bissau</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>Internship</p>
+               <p><b>Location:</b> <span class="location">Guinea-Bissau</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-29T23:55:00Z">29 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553142/immunization-specialist-no3-portauprince-haiti-82737-fta">Immunization Specialist, (NO-3), Port-au-Prince, Haiti #82737 (FTA)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>The Immunization Specialist is accountable for professional leadership in and contribution to the development, planning, implementation, monitoring and evaluation and administration of the Immunization programme in conjunction with Child Survival and Development, Maternal and Child Health, Health and Nutrition components within the country programme, to achieve the UNICEF's immunization plus goals and objectives for Haiti.</p>
+               <p><b>Location:</b> <span class="location">Haiti</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-27T03:55:00Z">26 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553157/consultoria-transferencias-en-efectivo-y-niñez-en-situación-de-vulnerabilidad-ciudad-de-panamá-3-meses">Consultoria: Transferencias en efectivo y niñez en situación de vulnerabilidad / Ciudad de Panamá / 3 meses</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>UNICEF en Panamá ha iniciado un nuevo programa de cooperación para el periodo 2021-2025 con el objetivo de contribuir a tres resultados nacionales:  a) Desarrollo en la Primera Infancia, b) Educación y Participación Adolescente, y c) Protección contra todas las formas de Violencia.  En este contexto ofrece asistencia técnica al Estado, incluyendo instituciones a nivel nacional y subnacional, sociedad civil y otros actores, para mejorar la cobertura y calidad de servicios para la niñez y la adolescencia. El análisis de protección social atraviesa las 3 áreas de resultado e incluye el trabajo sobre el sistema de protección social con una mirada sensible a los niños.</p>
+               <p><b>Location:</b> <span class="location">Panama</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-05T03:55:00Z">4 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553158/executive-assistant-gs5-panama-city-panama-post-42204">Executive Assistant (GS-5) / Panama City, Panama / Post# 42204</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>Under the supervision of the Representative, and supporting the Programme Manager the Executive Assistant is accountable for communications, operations and administrative support services to enhance the smooth running of the supervisor’s day-to day activities. Executive Assistants also represent the supervisor in initiating, following up on and resolving issues pertaining to administrative requests.</p>
+               <p><b>Location:</b> <span class="location">Panama</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-05T03:55:00Z">4 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553189/consultancy-writer-editor-covdp-team-pg-health-section-geneva-pgremote-req-553189">Consultancy: Writer / Editor- CoVDP Team, PG Health Section (Geneva), PG/Remote- Req #553189</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+               <p>Purpose of Activity/Assignment: To support the COVID-19 Vaccine Delivery Partnership (CoVDP) in writing, drafting, and copy-editing of the Situation Report and other ad-hoc publications.</p>
+               <p><b>Location:</b> <span class="location">United States</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-28T03:55:00Z">27 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  </div>
+</div>
+<p><a href="/en-us/listing/?page=2&page-items=20" class="more-link button" style="display:block" title="More Jobs" data-page="2" data-page-items="20" >More Jobs <span class="count">342</span></a></p>
+</div><div id="recent-jobs">
+  <div class="tag-based-search-result">
+   
+<div id="recent-jobs-content">
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553145/communication-specialist-producervideographer-p3-ta-364-days-121230-marketing-and-pr-services-pfp-geneva-switzerland">Communication Specialist (Producer/Videographer), P-3, TA (364 days), # 121230, Marketing and PR Services  PFP, Geneva, Switzerland</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>.</p>
+               <p><b>Location:</b> <span class="location">Switzerland</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T21:55:00Z">4 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553175/internal-and-external-vacancy-announcement-monitoring-officer-nob-position-no-120907-maputo-mozambique-open-for-nationals-of-mozambique-only">Internal and External Vacancy Announcement: Monitoring Officer, NOB, Position No. 120907, Maputo, Mozambique (Open for nationals of Mozambique only)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>The Monitoring and Evaluation Officer is accountable for the accomplishment of the stated key end-results by providing professional expertise and assistance in information/data collection, statistics and data analysis, monitoring & evaluation (M&E), preparation of reports, communication and partnership, and in implementing training programmes for national and sub-national data collection, providing support in KPIs reporting, monitoring, evaluation and research capacity building with special attention to the interest, concern and participation of primary stakeholders.</p>
+               <p><b>Location:</b> <span class="location">Mozambique</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-03T21:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553203/senior-information-comm-technology-associate-gs7-male-maldives">Senior Information Comm. Technology Associate, GS7, Male', Maldives.</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>UNICEF Maldives has an exciting opportunity for a Senior Information Comms. & Technology Associate. All qualified individuals are encouraged to apply!</p>
+               <p><b>Location:</b> <span class="location">Maldives</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T13:00:00Z">4 Aug 2022 06:00 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/550680/readvertisement-early-childhood-development-ecd-officer-no2-bucharest-romania-temporary-appointment-364-days">Re-advertisement: Early Childhood Development (ECD) Officer, NO-2,  Bucharest, Romania, (Temporary Appointment, 364 days)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>The ECD Officer provides technical assistance to develop and implement models for alternative early childhood education and care services for refugee children. He/she coordinates with relevant stakeholders to document and scale up ECD/ ECEC interventions within the the Refugees Response Plan (RRP).</p>
+               <p><b>Location:</b> <span class="location">Romania</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-03T20:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/552658/readvertisement-individual-contractor-accountability-to-affected-populations-aap-and-protection-from-sexual-exploitation-and-abuse-psea-coordinator-115-months-full-time-office-based-mena-regional-office">Re-advertisement: Individual Contractor - Accountability to Affected Populations (AAP) and Protection from Sexual Exploitation and Abuse (PSEA) Coordinator, 11.5 months - Full Time, Office Based - MENA Regional  oFFICE</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>The post holder will support the planning, monitoring and scaling up of VoC initiative as part of the broader
+approach and ongoing work to strengthen UNICEF and AAP and PSEA programming across the region. The Coordinator
+will also contribute to the organization of regional VoC /AAP lessons learned workshop/s.</p>
+               <p><b>Location:</b> <span class="location">Jordan</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-29T20:55:00Z">29 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553204/emergency-specialist-p4-kyiv-ukraine-temporary-appointment-364-days">Emergency Specialist, P-4, Kyiv, Ukraine (Temporary Appointment - 364 days)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>Under the direction and guidance of the Senior Emergency Coordinator, the Emergency Specialist coordinates overall country office emergency preparedness and response. He/ She is responsible for the development, planning, implementation, monitoring and evaluation of the emergency interventions, including fund-raising for emergency activities, to ensure the survival and well-being of children and mothers and affected communities in emergency. He/ She provides coordination and support for policy and programme planning and management in UNICEF supported emergency programmes in Ukraine</p>
+               <p><b>Location:</b> <span class="location">Ukraine</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-28T20:55:00Z">28 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553172/programme-associate-gs6-male-maldives">Programme Associate GS6, Male', Maldives</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>UNICEF Maldives is looking for a dynamic Programme Associate to support UNICEF Maldives programmes.</p>
+               <p><b>Location:</b> <span class="location">Maldives</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T13:00:00Z">4 Aug 2022 06:00 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553161/senior-supply-associate-gs7-colombo-sri-lanka-sri-lankan-nationals-only">Senior Supply Associate, (GS-7), Colombo, Sri Lanka (Sri Lankan nationals only)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>Under the overall supervision of the Supply Officer, Senior Supply Associate will perform independently supply documentation; local procurement and record maintenance relating to such functions within the described spheres.</p>
+               <p><b>Location:</b> <span class="location">Sri Lanka</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-31T18:25:00Z">31 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553090/консультант-для-работы-с-социальными-медиа-smm-специалист-только-граждане-кыргызстана-115-месяцев">Консультант для работы с социальными медиа (SMM специалист). Только граждане Кыргызстана (11.5 месяцев)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>Коммуникационный отдел ЮНИСЕФ в Кыргызстане ищет консультанта для работы с социальными медиа (SMM). Под руководством Координатора по коммуникациям, SMM специалист будет вести аккаунты ЮНИСЕФ во всех социальных медиа, мониторить эффективность работы, а также будет принимать участие в разработке и реализации онлайн кампаний, включая разработку планов для социальных сетей в рамках различных коммуникационных планов и планов упоминаемости в СМИ.</p>
+               <p><b>Location:</b> <span class="location">Kyrgyzstan</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T17:55:00Z">4 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553159/international-consultantcy-to-support-the-gender-programmatic-review-of-the-unicef-cambodia-country-office-programme-phnom-penh-cambodia">International Consultantcy to support the Gender Programmatic Review of the UNICEF Cambodia Country Office Programme, Phnom Penh, Cambodia</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>The United Nations Children’s Fund (UNICEF) in Phnom Penh, Cambodia is looking for an international consultant to to lead and support the undertaking of a Gender Programmatic Review (GPR) in the UNICEF Cambodia Country Office in order to shape, refine and align the new country programme document (CPD) with the new UNICEF Gender Action Plan (GAP 2022-25).  
+If you are passionate about making a lasting difference for children in Cambodia, UNICEF would like to hear from you.</p>
+               <p><b>Location:</b> <span class="location">Cambodia</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-03T16:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553193/child-protection-officer-no2-port-vila-vanuatu-51903">Child Protection Officer, NO2,  Port Vila, Vanuatu (#:51903)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>The UNICEF Pacific Multi-Country Office is looking to recruit a Child Protection Officer at the NoB level to be based in Port Vila, Vanuatu. 
+This position is open only to Ni-Vanuatu Nationals</p>
+               <p><b>Location:</b> <span class="location">Fiji/Pacific Island Countries</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-08T11:55:00Z">8 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553196/consultancy-editor-6-months-parttime-remote-office-of-internal-audit-and-investigations">CONSULTANCY: Editor (6 months, part-time, remote), Office of Internal Audit and Investigations</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>In pursuit of its mandate, the Office of Internal Audit and Investigations in UNICEF is looking for an individual to assist in the editorial and quality assurance process for finalizing reports and other written outputs, including internal audit and investigative reports.</p>
+               <p><b>Location:</b> <span class="location">United States</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T03:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553182/social-behavior-change-specialist-noc-temporary-appointment-364-days-bratislava-slovakia-for-slovak-nationals-only">Social & Behavior Change Specialist, NOC, (Temporary Appointment, 364 days) Bratislava, Slovakia (For Slovak Nationals Only)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>UNICEF Refugee response in Bratislava, Slovakia is urgently looking for a dedicated Social & Behavior Change Specialist to join our team. 
+If you are passionate about joining UNICEF in supporting emergency response to Ukraine and neighboring countries, we would like to hear from you.
+
+Basic annual salary for this position is from 59,440.59 Euro to 69,276.99 Euro, subject to the deductions for pension and medical insurance. Final estimation will be reflected in the offer letter of a successful candidate.</p>
+               <p><b>Location:</b> <span class="location">Slovakia</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-03T21:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553188/consultoría-para-la-preparación-del-documento-plan-de-gestión-del-programa-de-país-cpmp-20232026-de-unicef-ecuador">Consultoría para la preparación del documento Plan de Gestión del Programa de País (CPMP) 2023-2026 de UNICEF Ecuador</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>La Oficina de UNICEF en Ecuador debe preparar su Plan de Gestión del Programa de País (CPMP) 2023-2026. El CPMP es un documento estratégico de planificación que describe la principal estructura y mecanismos de gestión para apoyar la implementación del Programa de País (CPD) y el logro de sus resultados propuestos. El presupuesto integrado (IB) es una parte integral del proceso de preparación del CPMP y consolida los planes para la utilización de todos los recursos disponibles que dispone la Oficina de País, vinculándolos con sus programas, la efectividad de cada uno de ellos y los resultados de la gestión.</p>
+               <p><b>Location:</b> <span class="location">Ecuador</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-04T04:55:00Z">3 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553099/supply-logistics-officer-no2-maputo-mozambique-47080-open-to-mozambique-nationals-only">Supply & Logistics Officer, NO-2, Maputo, Mozambique #47080 (Open to Mozambique nationals only)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>The Supply Logistic Officer reports to the Supply and Logistics Manager as per the Country Office set-up for supervision and guidance.  The Supply Logistics Officer provides technical and operational support as per the Country Office (CO) set-up and is responsible for managing the supply chains of a medium sized country office, or elements of the supply chains of a larger supply operation. The supply chain operations include planning, procurement, contracting, customs clearance, warehousing, in country transport and distribution, as well as monitoring of supplies, services and construction works.</p>
+               <p><b>Location:</b> <span class="location">Mozambique</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-02T21:55:00Z">2 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553132/internship-child-survival-and-development-bissau-guineabissau">Internship Child survival and Development, Bissau, Guinea-Bissau</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>Internship</p>
+               <p><b>Location:</b> <span class="location">Guinea-Bissau</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-29T23:55:00Z">29 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553142/immunization-specialist-no3-portauprince-haiti-82737-fta">Immunization Specialist, (NO-3), Port-au-Prince, Haiti #82737 (FTA)</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>The Immunization Specialist is accountable for professional leadership in and contribution to the development, planning, implementation, monitoring and evaluation and administration of the Immunization programme in conjunction with Child Survival and Development, Maternal and Child Health, Health and Nutrition components within the country programme, to achieve the UNICEF's immunization plus goals and objectives for Haiti.</p>
+               <p><b>Location:</b> <span class="location">Haiti</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-27T03:55:00Z">26 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553157/consultoria-transferencias-en-efectivo-y-niñez-en-situación-de-vulnerabilidad-ciudad-de-panamá-3-meses">Consultoria: Transferencias en efectivo y niñez en situación de vulnerabilidad / Ciudad de Panamá / 3 meses</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>UNICEF en Panamá ha iniciado un nuevo programa de cooperación para el periodo 2021-2025 con el objetivo de contribuir a tres resultados nacionales:  a) Desarrollo en la Primera Infancia, b) Educación y Participación Adolescente, y c) Protección contra todas las formas de Violencia.  En este contexto ofrece asistencia técnica al Estado, incluyendo instituciones a nivel nacional y subnacional, sociedad civil y otros actores, para mejorar la cobertura y calidad de servicios para la niñez y la adolescencia. El análisis de protección social atraviesa las 3 áreas de resultado e incluye el trabajo sobre el sistema de protección social con una mirada sensible a los niños.</p>
+               <p><b>Location:</b> <span class="location">Panama</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-05T03:55:00Z">4 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553158/executive-assistant-gs5-panama-city-panama-post-42204">Executive Assistant (GS-5) / Panama City, Panama / Post# 42204</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>Under the supervision of the Representative, and supporting the Programme Manager the Executive Assistant is accountable for communications, operations and administrative support services to enhance the smooth running of the supervisor’s day-to day activities. Executive Assistants also represent the supervisor in initiating, following up on and resolving issues pertaining to administrative requests.</p>
+               <p><b>Location:</b> <span class="location">Panama</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-08-05T03:55:00Z">4 Aug 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="list-view--item">
+    <div class="container">
+      <div class="row-content">
+        <div class="row-content--text col-sm-12 col-md-9">
+          <div class="row-content--text-info">
+           <div class="row--short-title">
+            <h4>
+              <a class="job-link" href="/en-us/job/553189/consultancy-writer-editor-covdp-team-pg-health-section-geneva-pgremote-req-553189">Consultancy: Writer / Editor- CoVDP Team, PG Health Section (Geneva), PG/Remote- Req #553189</a>
+            </h4>
+           </div>
+           <div class="row--teaser">
+             <p></p>
+             <p>Purpose of Activity/Assignment: To support the COVID-19 Vaccine Delivery Partnership (CoVDP) in writing, drafting, and copy-editing of the Situation Report and other ad-hoc publications.</p>
+               <p><b>Location:</b> <span class="location">United States</span>
+               <p><b>Deadline:</b> <span class="close-date"><time datetime="2022-07-28T03:55:00Z">27 Jul 2022 11:55 PM </time></span></p>
+             <p></p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  </div>
+</div>
+<p><a href="/en-us/listing/?page=2&page-items=20" class="more-link button" style="display:block" title="More Jobs" data-page="2" data-page-items="20" >More Jobs <span class="count">342</span></a></p>
+</div><p id="PageUpPeopleLink"><a href="https://www.pageuppeople.com/powered-by-pageup/" target="_top">Powered by PageUp</a></p>
+</form>
+
+</div>
+
+</div></div>
+              <div class="field--item">
+<div class="text--block-content section-block-content">
+
+            <div class="field field--name-field-component-text-content field--type-text-long field--label-hidden field--item"><script>
+<!--//--><![CDATA[// ><!--
+function careerUpdate() {
+  var facetdiv = jQuery("#facetdiv");
+  var filters = jQuery(".search-filter-type");
+  for(x = 0; x < filters.length; x++) {
+    if (!filters[x].classList.contains('ready')) {
+      filters[x].classList.add('ready');
+      filters[x].insertAdjacentHTML('beforeend', '<div class="clickable-area"><span class="arrow-icon active">');
+      jQuery(filters[x].children[2]).on("click",function(){
+          jQuery(this).toggleClass('open');
+          jQuery(this).prev().prev().toggleClass('open');
+          jQuery(this).prev().slideToggle();
+      });
+    }
+  }
+  var checks = jQuery(".filter input");
+  facetdiv.empty();
+  for(x = 0; x < checks.length; x++) {
+      if (checks[x].checked) {
+        facetdiv.append('<a id="facet' + checks[x].id + '"><span class="facet-remove">' + checks[x].value + '<span class="close"></span></span></a>');
+        jQuery('#facet' + checks[x].id + '').click(function(checks) {
+          jQuery('#'+ this.id.substring(5)).trigger("click");
+        });
+      }
+  }
+  window.onclick = function(event) {
+    for(x = 0; x < filters.length; x++) {
+      jQuery(filters[x].children[2]).removeClass('open');
+      jQuery(filters[x].children[2]).prev().prev().removeClass('open');
+      jQuery(filters[x].children[2]).prev().slideUp();
+    }
+  }
+  jQuery(filters).click(function(event){
+    event.stopPropagation();
+  })
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  var filterdiv = jQuery("#search-filters");
+  filterdiv.before('<div class="solrsearch-facet-selected" id="facetdiv"></div>');
+  careerUpdate();
+  PU.Callback.add("search", "loaded", careerUpdate, this);
+  PU.Callback.add("listing", "loaded", careerUpdate, this);
+});
+
+
+//--><!]]>
+</script>
+
+</div></div>
+          </div>
+
+  </div>
+</div>
+</div>
+          </div>
+
+    </div>
+    <div class="wrapper-container--mosaic">
+
+    </div>
+  </div>
+
+</article>
+
+
+
+  </div>
+
+              </section>
+
+                </div>
+  </div>
+
+
+<div class="footer-wrapper">
+  <div class="footer container">
+                      <div class="region region-footer-left footer--left col-md-9">
+      <nav role="navigation" aria-labelledby="block-footer-menu-menu" id="block-footer-menu" data-block-plugin-id="system_menu_block:footer">
+
+  <span class="visually-hidden" id="block-footer-menu-menu">Footer</span>
+
+
+
+        <div class="footer--links">
+      <div class="footer--items col-xs-12 col-sm-4 col-md-4">
+              <a href="https://www.unicef.org/careers/" title="UNICEF Careers home">UNICEF Careers home</a>
+                    <div id="collapseFooter1">
+          <ul class="l-footer__column">
+                          <li>
+                                  <a href="https://www.unicef.org/careers/explore-careers-unicef" title="Explore careers" data-tracked-component="footer_link" data-bound="click" data-label="Explore careers">Explore careers</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/life-unicef" title="Life at UNICEF" data-tracked-component="footer_link" data-bound="click" data-label="Life at UNICEF">Life at UNICEF</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/get-prepared" title="Get prepared" data-tracked-component="footer_link" data-bound="click" data-label="Get prepared">Get prepared</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/career-stories-and-news" title="Stories and news" data-tracked-component="footer_link" data-bound="click" data-label="Stories and news">Stories and news</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/beware-fraudulent-job-offers" title="Beward of fraudulent job offers" data-tracked-component="footer_link" data-bound="click" data-label="Beward of fraudulent job offers">Beward of fraudulent job offers</a>
+                              </li>
+                      </ul>
+        </div>
+          </div>
+      <div class="footer--items col-xs-12 col-sm-4 col-md-4">
+              <a href="" title="Work with UNICEF">Work with UNICEF</a>
+                    <div id="collapseFooter2">
+          <ul class="l-footer__column">
+                          <li>
+                                  <a href="https://www.unicef.org/careers/unicef-job-categories" title="Job categories" data-tracked-component="footer_link" data-bound="click" data-label="Job categories">Job categories</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/compensation-benefits-and-wellbeing" title="Compensation, benefits and wellbeing" data-tracked-component="footer_link" data-bound="click" data-label="Compensation, benefits and wellbeing">Compensation, benefits and wellbeing</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/professional-and-career-development" title="Learning and development" data-tracked-component="footer_link" data-bound="click" data-label="Learning and development">Learning and development</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/working-humanitarian-emergencies" title="Working in emergencies" data-tracked-component="footer_link" data-bound="click" data-label="Working in emergencies">Working in emergencies</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/equity-inclusion-and-diversity-unicef" title="Diversity and inclusion" data-tracked-component="footer_link" data-bound="click" data-label="Diversity and inclusion">Diversity and inclusion</a>
+                              </li>
+                      </ul>
+        </div>
+          </div>
+      <div class="footer--items col-xs-12 col-sm-4 col-md-4">
+              <a href="" title="Our talent programmes">Our talent programmes</a>
+                    <div id="collapseFooter3">
+          <ul class="l-footer__column">
+                          <li>
+                                  <a href="https://www.unicef.org/careers/junior-professional-officer-programme" title="Junior Professional Officer" data-tracked-component="footer_link" data-bound="click" data-label="Junior Professional Officer">Junior Professional Officer</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/internships" title="Internship programme" data-tracked-component="footer_link" data-bound="click" data-label="Internship programme">Internship programme</a>
+                              </li>
+                          <li>
+                                  <a href="https://www.unicef.org/careers/volunteers-unicef" title="United Nations Volunteers" data-tracked-component="footer_link" data-bound="click" data-label="United Nations Volunteers">United Nations Volunteers</a>
+                              </li>
+                      </ul>
+        </div>
+          </div>
+  </div>
+
+
+
+  </nav>
+
+    </div>
+
+
+                    <div class="region region-footer-right footer--right col-md-3">
+    <div class="footer--social">
+      <nav role="navigation" aria-labelledby="block-social-menu-menu" id="block-social-menu" data-block-plugin-id="system_menu_block:social">
+
+  <span class="visually-hidden" id="block-social-menu-menu">Social</span>
+
+
+
+
+
+<div class="footer--social-follow">
+
+
+    <ul class="social-media-links--platforms platforms inline horizontal" data-tracked-component="navigation_first_level" data-bound="null">
+            <li>
+        <a href="https://www.linkedin.com/company/unicef/" icon="fa-linkedin" class="social-follow--item fa-linkedin fa fa-lg" data-tracked-component="follow_option" data-label="LinkedIn" aria-label="LinkedIn" data-bound="click"></a>
+      </li>
+            <li>
+        <a href="https://www.facebook.com/unicef/" icon="fa-facebook" class="social-follow--item fa-facebook fa fa-lg" data-tracked-component="follow_option" data-label="Facebook" aria-label="Facebook" data-bound="click"></a>
+      </li>
+            <li>
+        <a href="https://twitter.com/unicef" icon="fa-twitter" class="social-follow--item fa-twitter fa fa-lg" data-tracked-component="follow_option" data-label="Twitter" aria-label="Twitter" data-bound="click"></a>
+      </li>
+            <li>
+        <a href="https://www.youtube.com/unicef" icon="fa-youtube-play" class="social-follow--item fa-youtube-play fa fa-lg" data-tracked-component="follow_option" data-label="YouTube" aria-label="YouTube" data-bound="click"></a>
+      </li>
+      <li>
+        <a href="http://careers.pageuppeople.com/671/cw/en/rss"   icon="fa-rss" class="social-follow--item fa-rss fa fa-lg"data-tracked-component="follow_option" data-label="RSS" aria-label="RSS" ></a>
+      </li>
+  </ul>
+
+
+</div>
+
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-footer-secondary-menu-menu" id="block-footer-secondary-menu" data-block-plugin-id="system_menu_block:footer-secondary">
+
+  <span class="visually-hidden" id="block-footer-secondary-menu-menu">Footer Secondary</span>
+
+
+        <div class="social-follow">
+  <ul class="social-follow--links">
+        <li>
+      <a href="https://www.unicef.org/legal" class="social-follow--copyright">Legal</a>
+    </li>
+      </ul>
+</div>
+
+  </nav>
+
+    </div>
+  </div>
+
+            </div>
+</div>
+
+  </div>
+
+
+<script src="https://sites.unicef.org/vacanciestemplate/setpopupcookie.js"></script>
+<script src="https://sites.unicef.org/vacanciestemplate/js_datlqS5FqjQwgpfjzw68qcvj0LTom_Cz8plA67ZWtsI.js"</script>
+
+</div><script type="text/javascript" id="">(function(){var a=google_tag_manager["GTM-WBDQQ5"].macro(26),b=google_tag_manager[google_tag_manager["GTM-WBDQQ5"].macro(27)];window.dataLayer.push({event:a+".country"});window.dataLayer.push({event:a+".rollup",eventCallback:function(){b.onHtmlSuccess()}})})();</script><script type="text/javascript" id="">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://siteimproveanalytics.com/js/siteanalyze_88988.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+<script type="text/javascript" id="">function addEvent(a,b,c){if(a.addEventListener)a.addEventListener(b,c);else if(a.attachEvent)a.attachEvent("on"+b,function(b){c.call(a,b)});else if("undefined"===typeof a["on"+b]||null===a["on"+b])a["on"+b]=function(b){c.call(a,b)}}addEvent(window,"message",function(a){"undefined"!=typeof a.data&&"https://help.unicef.org"===a.origin&&a.data.includes("gapm-")&&dataLayer.push(JSON.parse(a.data.substring(5)))});</script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","191101634658629");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=191101634658629&amp;ev=PageView&amp;noscript=1"></noscript>
+<script type="text/javascript" id="">function clickEventToAnalytics(){dataLayer.push({event:"TWEvent",socialNetwork:"Twitter",socialAction:"Click",socialTarget:window.location.href})}function tweetIntentToAnalytics(){dataLayer.push({event:"TWEvent",socialNetwork:"Twitter",socialAction:"Tweet",socialTarget:window.location.href})}function retweetIntentToAnalytics(){dataLayer.push({event:"TWEvent",socialNetwork:"Twitter",socialAction:"Retweet",socialTarget:window.location.href})}
+function followIntentToAnalytics(){dataLayer.push({event:"TWEvent",socialNetwork:"Twitter",socialAction:"Follow",socialTarget:window.location.href})}"undefined"!==typeof twttr&&twttr.ready(function(a){a.events.bind("click",clickEventToAnalytics);a.events.bind("tweet",tweetIntentToAnalytics);a.events.bind("retweet",retweetIntentToAnalytics);a.events.bind("follow",followIntentToAnalytics)});</script><div style="display: none; visibility: hidden;"><script>(function(){var a=document.querySelector("#BeTumar_iframe");if(a){var b=new MutationObserver(function(a){a.forEach(function(a){"attributes"===a.type&&"height"===a.attributeName&&300>a.target.height&&(dataLayer.push({event:"formEnviado.country"}),b.disconnect())})});b.observe(a,{attributes:!0})}})();</script></div><div id="stcpDiv" style="position: absolute; top: -1999px; left: -1988px;">ShareThis Copy and Paste</div><div id="stwrapper" class="stwrapper stwrapper4x" style="display: none;"><iframe allowtransparency="true" id="stLframe" class="stLframe" name="stLframe" frameborder="0" scrolling="no" src="https://ws.sharethis.com/secure/index.html"></iframe></div><div id="stOverlay" onclick="javascript:stWidget.closeWidget();"></div><script type="text/javascript" id="">(function(){var a=google_tag_manager["GTM-WBDQQ5"].macro(109),b=google_tag_manager[google_tag_manager["GTM-WBDQQ5"].macro(110)];window.dataLayer.push({event:a+".country"});window.dataLayer.push({event:a+".rollup",eventCallback:function(){b.onHtmlSuccess()}})})();</script></body></html>
